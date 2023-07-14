@@ -1,45 +1,20 @@
-const http = require('http');
-const fs = require('fs');
-const { log } = require('console');
+const fs=require("fs");
+const path=require("path");
+// const req=require("./Public/index")
+const express=require("express");
+const app=express();
+const port =8080
 
+const static=path.join(__dirname,"./public")
+// console.log(static);
+// const path=require();
+// fs.readFile("./public/index.html","utf-8",(err,data)=>{
+//     console.log(data)
 
-const server = http.createServer((req, res) => {
-  // res.end("hyy")
-  const filePath = 'index.html';
+// })
+app.use(express.static(static));
+app.listen(port,()=>{
+    console.log("server is running")
+})
+console.log(static);
 
-
-  if (req.url == "/home") {
-    fs.readFile(filePath, 'utf8', (err, data) => {
-      if (err) {
-        console.error(err);
-        res.writeHead(500, { 'Content-Type': 'text/plain' });
-        res.end('Internal Server Error');
-        return;
-      }
-    
-      
-      else {
-        res.end(data)
-        // res.writeHead(200, { 'Content-Type': 'text/html' });
-        // const modifiedContent = data.replace('name', 'John Doe');
-        // res.end(modifiedContent);
-      }
-
-
-    });
-  }
-  else if (req.url == "/submit") {
-    
-    console.log(req)
-    
-
-  }
-
-
-});
-
-const port = 8000;
-server.listen(port, () => {
-  console.log(`Server is listening on port ${port}`);
-});
- 
