@@ -12,6 +12,11 @@ const static=path.join(__dirname,"./public")
 //     console.log(data)
 
 // })
+
+app.get("/",async(req,res)=>{
+res.send({message:"hyyyy"})
+}
+       )
 app.use(express.static(static));
 app.listen(port,()=>{
     console.log("server is running")
