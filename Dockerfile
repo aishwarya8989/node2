@@ -7,4 +7,4 @@ COPY . .
 RUN npm i
 
 # CMD ["node","--watch","index.js"]
-CMD ["nodemon","index.js"]
+CMD ["npm","start"]
