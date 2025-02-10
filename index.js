@@ -3,7 +3,7 @@ const path=require("path");
 // const req=require("./Public/index")
 const express=require("express");
 const app=express();
-const port =8080
+const port =8000
 
 const static=path.join(__dirname,"./public")
 // console.log(static);
