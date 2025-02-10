@@ -6,4 +6,4 @@ COPY . .
 
 RUN npm i
 
-CMD ["npm","start"]
+CMD ["node","--watch","index.js"]
