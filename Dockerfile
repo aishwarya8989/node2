@@ -5,3 +5,5 @@ WORKDIR /app
 COPY . .
 
 RUN npm i
+
+cmd ["npm","start"]
