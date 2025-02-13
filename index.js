@@ -12,7 +12,7 @@ const static=path.join(__dirname,"./public")
 //     console.log(data)
 
 // })
-console.log("hyyyyyyy   1");
+console.log("hyyyyyyy   1",a);
 app.get("/",async(req,res)=>{
 res.send({message:"hyyyy"})
 }
